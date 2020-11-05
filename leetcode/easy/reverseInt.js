@@ -38,6 +38,8 @@
 // -231 <= x <= 231 - 1
 
 
+
+
 /**
  * @param {number} x
  * @return {number}
@@ -61,6 +63,8 @@ var reverse = function(x) {
 //     return newNum.join("")
 //     }
 
+//still working on this one
+
 var reverse = function(x) {
     
   const reversedInt = parseInt(Math.abs(x).toString().split('').reverse().join(''));
@@ -70,3 +74,17 @@ var reverse = function(x) {
   return reversedInt * Math.sign(x);
     
 };
+
+function reverse(x) {
+    const neg = x < 0;
+    let num = neg ? (x *= -1) : x;
+    let result = neg ? "-" : "";
+    while (num > 0) {
+      let r = num % 10;
+      num = (num - r) / 10;
+      result += r.toString();
+    }
+    return parseInt(result);
+  }
+  console.log(reverse(123));
+  console.log(reverse(-123));
