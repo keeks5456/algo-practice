@@ -53,3 +53,18 @@ function includesNumber(array, index){
     }
 }
 
+function countDown(n){
+    console.log(n)
+    if(n > 1){
+      countDown(n -1) // recursive call
+    } else {
+      return true // base case
+    }
+  }
+   
+  countDown(5)
+  // 5
+  // 4
+  // 3
+  // 2
+  // 1
