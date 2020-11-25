@@ -90,7 +90,7 @@
         // One of the most powerful features when thinking of arrays as data structures, is that arrays can contain, or even be completely made up of other arrays. We have seen arrays that contain arrays in previous challenges, but fairly simple ones. However, arrays can contain an infinite depth of arrays that can contain other arrays, each with their own arbitrary levels of depth, and so on. In this way, an array can very quickly become very complex data structure, known as a multi-dimensional, or nested array. 
         
         // We have defined a variable, myNestedArray, set equal to an array. Modify myNestedArray, using any combination of strings, numbers, and booleans for data elements, so that it has exactly five levels of depth (remember, the outer-most array is level 1). Somewhere on the third level, include the string 'deep', on the fourth level, include the string 'deeper', and on the fifth level, include the string 'deepest'.
-        
+
         let myNestedArray = [
           // Only change code below this line
           ['unshift', false, 1, 2, 3, 'complex', 'nested'],[
@@ -111,4 +111,25 @@
           ['iterate', 1.3849, 7, '8.4876', 'arbitrary', 'depth']
           // Only change code above this line
         ];
+
+        // Modify an Object Nested Within an Object
+        // Here we've defined an object userActivity, which includes another object nested within it. Set the value of the online key to 45.
+
+        let userActivity = {
+          id: 23894201352,
+          date: 'January 1, 2017',
+          data: {
+            totalUsers: 51,
+            online: 42
+          }
+        };
+        
+        // Only change code below this line
+        userActivity.data['online'] = 45
+        // OR
+        userActivity['data'].online = 45
+        // Only change code above this line
+        
+        console.log(userActivity);
+        
         
