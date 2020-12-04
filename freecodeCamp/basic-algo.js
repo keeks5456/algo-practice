@@ -81,3 +81,37 @@ function factorialize(num) {
 //   For all numbers passed to the function which are greater than one, the simple for loop will decrement num by one each iteration and recalculate product down to the value 1.
   
 
+// Find Longest Word In A String
+
+function findLongestWordLength(str) {
+    let array = str.split(' ') 
+    //split string into array
+    console.log(array)
+    let currentLen = 0; 
+    //Declare a variable to keep track of the maximum length and loop from 0 to the length of the array of words.
+    for(let i = 0; i < array.length; i++){
+      if(array[i].length > currentLen){
+        currentLen = array[i].length
+      }
+      //Then check for the longest word by comparing the current word to the previous one and storing the new longest word. At the end of the loop just return the number value of the variable currentLen.
+    }
+    return currentLen;
+  }
+  
+  findLongestWordLength("The quick brown fox jumped over the lazy dog");
+
+//   Using .map()
+
+function findLongestWordLength(str) {
+    return Math.max(...str.split(' ').map(word => word.length))
+  }
+  findLongestWordLength("The quick brown fox jumped over the lazy dog");
+
+//   the breakdown
+
+// using Math.max(), we will be able to find the max largest of the given numbers
+// using .split() we want to split the string into an array 
+// using .map(), we want to create another array, made from the length of each element from out split array
+// ==> .map(word => word.length) this will give us the numbered length of each word
+// using the spread operator (...) we can pass the array as an argument for Math.max()
+
