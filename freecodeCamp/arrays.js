@@ -90,7 +90,7 @@
         // One of the most powerful features when thinking of arrays as data structures, is that arrays can contain, or even be completely made up of other arrays. We have seen arrays that contain arrays in previous challenges, but fairly simple ones. However, arrays can contain an infinite depth of arrays that can contain other arrays, each with their own arbitrary levels of depth, and so on. In this way, an array can very quickly become very complex data structure, known as a multi-dimensional, or nested array. 
         
         // We have defined a variable, myNestedArray, set equal to an array. Modify myNestedArray, using any combination of strings, numbers, and booleans for data elements, so that it has exactly five levels of depth (remember, the outer-most array is level 1). Somewhere on the third level, include the string 'deep', on the fourth level, include the string 'deeper', and on the fifth level, include the string 'deepest'.
-        
+
         let myNestedArray = [
           // Only change code below this line
           ['unshift', false, 1, 2, 3, 'complex', 'nested'],[
@@ -111,4 +111,143 @@
           ['iterate', 1.3849, 7, '8.4876', 'arbitrary', 'depth']
           // Only change code above this line
         ];
+
+        // Modify an Object Nested Within an Object
+        // Here we've defined an object userActivity, which includes another object nested within it. Set the value of the online key to 45.
+
+        let userActivity = {
+          id: 23894201352,
+          date: 'January 1, 2017',
+          data: {
+            totalUsers: 51,
+            online: 42
+          }
+        };
         
+        // Only change code below this line
+        userActivity.data['online'] = 45
+        // OR
+        userActivity['data'].online = 45
+        // Only change code above this line
+        
+        console.log(userActivity);
+        
+
+        // Check if an Object has a Property
+        // what if we just wanted to know if an object has a specific property? JavaScript provides us with two different ways to do this. One uses the hasOwnProperty() method and the other uses the in keyword. If we have an object users with a property of Alan, we could check for its presence in either of the following ways:
+        
+        users.hasOwnProperty('Alan');
+        'Alan' in users;
+        // both return true
+
+        // We've created an object, users, with some users in it and a function isEveryoneHere, which we pass the users object to as an argument. Finish writing this function so that it returns true only if the users object contains all four names, Alan, Jeff, Sarah, and Ryan, as keys, and false otherwise.
+
+        let users = {
+          Alan: {
+            age: 27,
+            online: true
+          },
+          Jeff: {
+            age: 32,
+            online: true
+          },
+          Sarah: {
+            age: 48,
+            online: true
+          },
+          Ryan: {
+            age: 19,
+            online: true
+          }
+        };
+        
+        function isEveryoneHere(obj) {
+          // Only change code below this line
+        if(
+          obj.hasOwnProperty('Alan') && 
+          obj.hasOwnProperty('Ryan') && 
+          obj.hasOwnProperty('Sarah') && 
+          obj.hasOwnProperty('Jeff') 
+          ){
+            return true
+        } else {
+          return false
+        }
+        // alternative solution 
+        return ['Alan', 'Sarah', 'Jeff', 'Ryan'].every(name => obj.hasOwnProperty(name))
+        
+          // Only change code above this line
+        }
+        
+        console.log(isEveryoneHere(users));
+        
+
+        //  Iterate Through the Keys of an Object with a for...in Statement
+
+        for (let user in users) {
+          console.log(user);
+        }
+        
+        // logs:
+        Alan
+        Jeff
+        Sarah
+        Ryan
+
+        // In this statement, we defined a variable user, and as you can see, this variable was reset during each iteration to each of the object's keys as the statement looped through the object, resulting in each user's name being printed to the console. NOTE: Objects do not maintain an ordering to stored keys like arrays do; thus a key's position on an object, or the relative order in which it appears, is irrelevant when referencing or accessing that key.
+
+        // Define a function countOnline which accepts one argument (a users object). Use a for...in statement within this function to loop through the users object passed into the function and return the number of users whose online property is set to true. An example of a users object which could be passed to countOnline is shown below. Each user will have an online property with either a true or false value.
+
+        // example
+        {
+          Alan: {
+            online: false
+          },
+          Jeff: {
+            online: true
+          },
+          Sarah: {
+            online: false
+          }
+        }
+
+        function countOnline(userObj){
+          let results = 0
+          for(let user in userObj){
+            if(userObj[user].online === true){
+              results++
+            }
+          }
+          return results
+        }
+
+        // have a results counter
+        // for every user in our userObj Object, if the that user's online presence is true in our Object
+        // with our counter we want to print out all that apply true (thats why we increment)
+        // otherwise return the one thats
+
+        // Generate an Array of All Object Keys with Object.keys()
+
+        let users = {
+          Alan: {
+            age: 27,
+            online: false
+          },
+          Jeff: {
+            age: 32,
+            online: true
+          },
+          Sarah: {
+            age: 48,
+            online: false
+          },
+          Ryan: {
+            age: 19,
+            online: true
+          }
+        };
+        
+        function getArrayOfUsers(obj) {
+          return Object.keys(obj)
+        }
+        // output: [ 'Alan', 'Jeff', 'Sarah', 'Ryan' ]
