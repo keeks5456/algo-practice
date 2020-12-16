@@ -7,8 +7,19 @@
 //  * @return {string}
  
 var longestCommonPrefix = function(strs) {
+    let prefix = ''
     
-};
+    if(strs.length === 0 || strs === null) return prefix
+    
+    for(let i = 0; i < strs[0].length; i++){
+      const char = strs[0][i]
+      for(let j = 1; j < strs.length; j++){
+          if(strs[j][i] !== char) return prefix  
+      }
+        prefix = prefix + char
+    }
+    return prefix
+}; 
 
 // Example 1:
 
@@ -43,10 +54,10 @@ function longestCommonPre(string){
     for(i=0, i < stringFirstIndex.length, i++){
         characters = stringAtFirstIndexAndI
         for(j = 1, j < string.length, j++){
-            if(stringAtJAndI equate to charactersVariable){
-            }
-            prefix = prefix concat characters
+            if(stringAtJAndI does not equate to charactersVariable) return thePrefix
+            otherwise ==> if is equal
         }
-        return thePrefix
+        prefix = prefix concat characters
     }
+    return thePrefix
 }
