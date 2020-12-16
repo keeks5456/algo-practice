@@ -28,4 +28,25 @@ var longestCommonPrefix = function(strs) {
 // strs[i] consists of only lower-case English letters.
 
 
-//Inside of our anonymous function we want to create a variable that we will use to equate to our longest prefix and be returned at the end our function:
+//we first need to create an empty string variable to equate to the longest common prefix
+//we need to make sure the array is not empty or null
+//we can now start with a for loop, we can create a nested loop where the first loop iterates over and seearch for first prefix
+//the second loop will be the comparison 
+//if the prefix in the second loop does not match the first loop, we can return the empty string
+//if they do match, we can call our empty string and concat the string to the prefixed word
+
+function longestCommonPre(string){
+    prefix = willHoldPrefixes
+
+    arrayEmpty || arrayNull ? return prefix
+
+    for(i=0, i < stringFirstIndex.length, i++){
+        characters = stringAtFirstIndexAndI
+        for(j = 1, j < string.length, j++){
+            if(stringAtJAndI equate to charactersVariable){
+            }
+            prefix = prefix concat characters
+        }
+        return thePrefix
+    }
+}
