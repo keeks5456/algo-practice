@@ -1,5 +1,7 @@
-// Determine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward.
 
+// credit to this solution goes out to the Dev Blog created by Elizabeth Diang. I Am not a mathmatical person at all, following thier blog was helpful and insightful! 
+
+// Determine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward.
 // Follow up: Could you solve it without converting the integer to a string?
 
 
@@ -8,7 +10,7 @@ const isPalindrome = (x) =>{
     if(x < 0) return false
     
     let reversed = 0, y = x
-    
+
     while( y > 0){
         const lastDigit = y % 10
         reversed = (reversed * 10 ) + lastDigit
@@ -31,5 +33,4 @@ isPalindrome(-121)
 
 // This solution saved us from having to traverse an array of string digits, which means we didn't have to use extra storage for this problem! When trying to find a mathematical approach to a coding question, think about any patterns you notice, and ask yourself if you need to read one digit at a time. If so, you can definitely traverse a number's digits with modulo arithmetic and division.
 
-// credit to this solution goes out to the Dev Blog created by Elizabeth Diang. I Am not a mathmatical person at all, following thier blog was helpful and insightful! 
 
