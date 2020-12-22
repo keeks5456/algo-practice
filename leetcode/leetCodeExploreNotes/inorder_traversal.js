@@ -56,3 +56,18 @@ function inorderTraversal(root){
 
 // another iterative solution
 
+// 1. create an empty stack to push nodes int
+// 2. create a results to return at the end
+// 3. initialize the root to a current variable 
+// 4. while current is not null and stack is not empty
+// 5. AND while the current is not null
+    // a. push into our stack whatever is in current 
+    // b. keep assigning current to the current left nodes
+// for the right side we will want to pop off from the stack and add it into pur current variable
+// 6. assign current variable the popped pff element in stack
+//7. push the current value into our results
+//8. keep asssigning the right nodes to current
+// 9. return the result
+
+
+
