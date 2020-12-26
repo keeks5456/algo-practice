@@ -1,17 +1,22 @@
 // Given the root of a binary tree, return the inorder traversal of its nodes' values.
 
 // notes: root is a (binary) tree that optionally contains a left and/or right (binary) tree.
-/**
- * Definition for a binary tree node.
- * function TreeNode(val, left, right) {
- *     this.val = (val===undefined ? 0 : val)
- *     this.left = (left===undefined ? null : left)
- *     this.right = (right===undefined ? null : right)
- * }
- */
-/**
- * @param {TreeNode} root
- * @return {number[]}
+
+//  * Definition for a binary tree node.
+//  * function TreeNode(val, left, right) {
+//  *     this.val = (val===undefined ? 0 : val)
+//  *     this.left = (left===undefined ? null : left)
+//  *     this.right = (right===undefined ? null : right)
+
+//  * @param {TreeNode} root
+//  * @return {number[]}
+
+/*
+First, visit all the nodes in the left subtree
+
+Then the root node
+
+Visit all the nodes in the right subtree
  */
 
 var inorderTraversal = function(root) {
