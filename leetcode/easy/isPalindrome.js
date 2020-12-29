@@ -32,5 +32,3 @@ isPalindrome(-121)
 // Remove the last digit from y by dividing it by 10, and truncating the last decimal. We can do this using the bitwise OR operator |. This is another trick that can help you in future JS problems. In this case, we're converting the result into an integer, and then return the new integer:
 
 // This solution saved us from having to traverse an array of string digits, which means we didn't have to use extra storage for this problem! When trying to find a mathematical approach to a coding question, think about any patterns you notice, and ask yourself if you need to read one digit at a time. If so, you can definitely traverse a number's digits with modulo arithmetic and division.
-
-
