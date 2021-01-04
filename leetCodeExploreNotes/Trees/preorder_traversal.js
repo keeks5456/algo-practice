@@ -45,6 +45,7 @@ Constraints:
 //   2.2. Push 'right child' of popped item to stack.
 //   2.3. Push 'left child' of popped item to stack.
 
+//iterative solution
 var preorderTraversal = function(root){
     if(root == null){
         return []
@@ -73,6 +74,8 @@ var preorderTraversal = function(root){
     // if a root on the left is not null recursive call preorderTraversal and add root into accumulator
     // if a root on the right is not null recursive call preorderTraversal and add root into accumulator
     // return accumulator
+
+    //recursive solution
     var preorderTraversal = function(root, acc = []) {
        if(!!root){
            acc.push(root.val)

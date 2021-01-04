@@ -26,6 +26,8 @@
 //create a results variable
 //initialize a current variable to root
 
+//iterative solution
+
 var postorderTraversal = function(root) {
 	if (root == null) {
 		return [];
@@ -45,3 +47,13 @@ var postorderTraversal = function(root) {
 	}
 	return result;
 };
+
+//recursive solution
+var postorderTraversal = function(root, acc = []){
+    if(!!root){
+        if(root.left) postorderTraversal(root.left, acc) //visit the left side first
+        if(root.right) postorderTraversal(root.right, acc) //visit the right side next
+         acc.push(root.val) //root is pushed last
+    }
+    return acc
+}

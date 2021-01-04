@@ -39,6 +39,8 @@
 // if there is a leaf on the right of the current node, add to the front of our queue that right node leaf
 // when done push all of our subarray to our results 
 // return those results
+
+// iterative solution
 var levelOrder = function(root) {
     if(root == null) return []
     let results = []
@@ -57,3 +59,4 @@ var levelOrder = function(root) {
     }
     return results
 };
+
