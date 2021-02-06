@@ -34,8 +34,26 @@
 // c = 0 0 1 0 0 1 0
 
 function jumpingOnClouds(c) {
+    let jump = 0
 
+    for(let i = 0; i < c.length; i++){
+        c[i + 2] == 0 ? i++ : null
+        jump ++
+    }
+    return jump - 1
+}
 
+function jumpingOnClouds(c){
+    let jump = 0
+
+    let i = 0
+
+    while(c.length > 0){
+        c[i + 2] == 0 ? i++ : null
+        jump ++
+    }
+
+    return jump - 1
 }
 
 // counter to keep track of jumps made
@@ -46,5 +64,13 @@ function jumpingOnClouds(c) {
 // current = [0]
 // can either jump [0] + 1 || [0] + 2
 
-// if first indice is not c[1] && first index c[0] jump either 1 or 2 places
-// increment our counter for every jump made 
+// code above explianed:
+// assign a counter varible
+// iterate through our array and for each Element, if that cloud at the 2nd jump is a zero go to the next cloud 
+// otherwise (if we hit a 1 ) avoid that cloud
+// increment the jump by 1
+
+// return our total jumps but subtract 1 --> why? because we need to return the least ampunt of jumps possible
+
+// this has a Time Complexity of, O(n).
+//  If the loop variables is incremented / decremented by a constant amount. 
