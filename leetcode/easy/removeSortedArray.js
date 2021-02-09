@@ -21,7 +21,7 @@ var removeDuplicates = function(nums) {
 // this is a sorted array! there for if we know there are removeDuplicates, we will know what place the duplicate will be which is directly after its next elements
 //realize the first num is always unqiue so start at 1
 
-we want to compare the two numbers if they are the same, and if they arent the SyncManager, we want to place that number at our index
+// we want to compare the two numbers if they are the same, and if they arent the SyncManager, we want to place that number at our index
 
 //pseudocode
 // assign a pointer to the unique element 
