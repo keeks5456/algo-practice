@@ -207,3 +207,5 @@ function getDifferentNumber(arr) {
   //if array has missing number return that number
   //arr[i] != i
     //return i 
+
+    
