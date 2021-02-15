@@ -29,16 +29,31 @@ Each element in the array appears twice except for one element which appears onl
  * @return {number}
  */
 var singleNumber = function(nums) {
-    // if(nums.length === 1) return 1
+    if(nums.length === 1) return 1
      
-//     let sorted = nums.sort()
+    let sorted = nums.sort()
 
-//    for(let i = 0; i < sorted.length; i++){
-//         if(sorted[i - 1] !== sorted[i] && sorted[i+1] !== sorted[i]){
-//             return sorted[i]
-//         }
-//     }
-    
+   for(let i = 0; i < sorted.length; i++){
+        if(sorted[i - 1] !== sorted[i] && sorted[i+1] !== sorted[i]){
+            return sorted[i]
+        }
+    }
+}
+
+//breakdown
+// if the length of our array is 1 ,return 1
+// first we need to sort pur array
+// then iterate over that sorted array
+// if the last  element does not equate to the first element && the 2nd element does not equate to the first element 
+//then return that single element 
+
+// Array.sort() => [1,2,2]
+// if(array(2) NOT equal array(1) && array(2) NOT equal array(1)) <== true 
+// return array(1)
+
+
+
+    var singleNumber = function(nums){
     let hash = {}
     nums.forEach((n) =>{
         if(hash[n]){
@@ -50,3 +65,10 @@ var singleNumber = function(nums) {
    
     return Object.keys(hash)[0]
 };
+
+// breakdown 
+// create a hash table
+// for each number in num Array
+// if the number exist in our hash, we delete it
+// if it doesnt assign it a value of one b/c that's our unquie element 
+//return the key of our object at first index
