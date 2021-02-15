@@ -37,12 +37,15 @@
 // 3
 
 // Complete the sockMerchant function below.
+
 function sockMerchant(n, ar) {
+  if(!ar || ar.length !== n) return 0
+
 let pairs = 0
 let obj = {}
 
 for(let num of ar){
-  obj[num] = obj[num] + 0 || 1
+  obj[num] = obj[num] + 1 || 1
 
 }
 for(let num of ar ){
