@@ -39,6 +39,7 @@ var singleNumber = function(nums) {
         }
     }
 }
+//time complexity O(n log n) b/c of sorting
 
 //breakdown
 // if the length of our array is 1 ,return 1
