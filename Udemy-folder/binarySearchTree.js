@@ -175,6 +175,7 @@ if(inputNode.left != null){
 **/
 
 //interviewcake
+
 function getDifferentNumber(arr) {
 
     let obj = {}
