@@ -126,12 +126,12 @@ function factorial(num){
   //   if(this.left) return this.left.getMinVal()
   //   else return this.value
     
-  //  let current = this.value
+   let current = this.value
    
-  //  while(current.left != null){
-  //    current = current.left
-  //  }
-  //   return current.left
+   while(current.left != null){
+     current = current.left
+   }
+    return current.left
   }
   
   BST.prototype.getMaxVal = function(){
