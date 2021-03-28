@@ -34,7 +34,7 @@ var findKthPositive = function(arr, k) {
     let start = 0 //will be first element
     
     for(let i = 0; i < arr.length; i++){
-        if(k > arr[i] -start-1){
+        if(k > arr[i] - start-1){
             k -= (arr[i] - start - 1)
         } else return start + k
             start = arr[i]
