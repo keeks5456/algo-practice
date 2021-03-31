@@ -36,17 +36,3 @@ function findMinAndRemove(array){
     return min
 }
 
-function selectionSort(array){
-    let newMin; 
-    let sorted = []
-    while(array.length != 0){
-        newMin = findMinAndRemove(array)
-         //this function has an already sorted array, and assign it to our newMin variable
-
-         //then we can push all the sorted elements to our sorted variable
-         sorted.push(newMin)
-    }
-    return sorted 
-    //return our new sorted array
-    console.log(sorted)
-}

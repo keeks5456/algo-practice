@@ -47,3 +47,43 @@ var findTheDifference = function(s, t) {
     }
     return - 1
 };
+
+
+
+
+
+function getDifferentNumber(arr) {
+  // your code goes here
+  if(!arr) return 0
+  
+  let n = arr.sort() // n
+  for(let i = 0; i < n.length; i++){
+    if(n[i] != i){
+      return i 
+    }
+  }
+  return arr.length
+}
+
+
+
+
+
+//interviewcake
+
+function getDifferentNumber(arr) {
+
+  let obj = {}
+  
+  for(element of arr){ //[0,1,2,3]
+    obj[element] = true
+  }
+  
+  for(let i = 0; i < arr.length; i++){
+    if(!obj.hasOwnProperty(i)){
+      return i
+    }
+  }
+  return arr.length
+}
+
