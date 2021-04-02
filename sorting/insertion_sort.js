@@ -20,6 +20,17 @@ function insertionSort(array){
 }
 // insertionSort([9, 7, 8, 1, 4])
 
+
+
+
+
+
+
+
+
+
+
+//deal with this later
 //Flatiron Learn Lab
 function findMinAndRemove(array){
     let min = array[0] 

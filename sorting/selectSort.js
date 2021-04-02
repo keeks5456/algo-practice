@@ -52,6 +52,7 @@ function selectionSort(arr){
               lowest = j;
           }
       }
+      
       if(i !== lowest){
           //SWAP!
           var temp = arr[i];
