@@ -47,7 +47,7 @@ function bubbleSort(arr) {
 function bubbleSort(arr){
   //assign a block variable to the length of the array
   let block = arr.length 
-  //while the blck length is not empty
+  //while the block length is not empty
   while(block){ 
     //iterate thrugh the array
     for(let i = 0; i < block; i++){
@@ -96,6 +96,38 @@ function bubbleSort(arr){
   let block = arr.length 
   while(block){
     for(let i = 0; i < block; i++){
+      if(arr[i] > arr[i + 1]){
+        let holder = arr[i]
+        arr[i] = arr[i + 1]
+        arr[i + 1] = holder
+      }
+    }
+    block --
+  }
+  return arr
+}
+
+
+function bubbleSort(arr){
+  let noSwaps;
+  for(var i = arr.length; i > 0; i--){
+    noSwaps = true 
+    for(let j = 0; j > i - 1; j++){
+      if(arr[j] > arr[j + 1]){
+        var temp = arr[i]
+        arr[i] = arr[j + 1]
+        arr[j + 1] = temp
+      }
+    }
+    if(noSwaps) break
+  }
+  return arr
+}
+
+function bubbleSort(arr){
+  let block = arr.length
+  for(let i = 0; i < block; i++){
+    while(block){
       if(arr[i] > arr[i + 1]){
         let holder = arr[i]
         arr[i] = arr[i + 1]

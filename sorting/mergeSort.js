@@ -9,7 +9,6 @@ const merge = (arr1, arr2) =>{
   let results = []
   //assign i and j to 0 as comparison pointers 
   let i = 0, j = 0
-
   //create a while loop going through both arr1 & arr2 loping at each index
   // while there are still elements in our arrays, do this
   while(i < arr1.length && j < arr2.length){
