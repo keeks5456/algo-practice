@@ -34,6 +34,7 @@ const merge = (arr1, arr2) =>{
     results.push(arr2)
     j++
   }
+  return results
 }
 
 //helper method to sort the array
@@ -52,7 +53,7 @@ const mergeSort = (arr) =>{
 }
 
 
-
+//alex solution
 function mergeSort(arr) {
 
   function merge(arr1, arr2) {
@@ -87,3 +88,35 @@ AVERAGE & WORST depends
 
 Merge sort divides the array in half, sorts each of those halves, and then merges them back together. Each of those halves has the same sorting algorithm applied to it. Eventually, you are merging just two single­ element arrays. It is the "merge" part that does all the heavy lifting.
 */
+
+
+//first merge two sorted arrays
+
+function mergeSort(arr1, arr2){
+  let results = []
+
+  let i = 0
+  let j = 0
+
+  while(i < arr1.length && j < arr2.length){
+    if(arr2[j] > arr1[i]){
+      results.push(arr1[i])
+      i++
+    } else {
+      results.push(arr2[j])
+      j++
+    }
+  }
+
+  return results
+}
+
+
+function merge(arr){
+  if(arr.length <= 1) return arr
+
+  let middle = Math.floor(arr.lenght / 2)
+  let left = mergeSort(arr.slice(0, middle))
+  let right = mergeSort(arr.slice(middle))
+  return merge(left, right)
+}
